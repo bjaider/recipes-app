@@ -1,7 +1,9 @@
 import { Card, Col, Row, Button, Text } from "@nextui-org/react";
+import { useNavigate } from "react-router-dom";
 import  "../styles/Card.css"
-const CardComponent = ({title,id,image}) => (
-  <Card cover className="card-container">
+const CardComponent = ({title,id,image}) => {
+  let navigate = useNavigate();
+  return <Card cover className="card-container">
     <Card.Body>
       <Card.Image
         src={image}
@@ -25,7 +27,7 @@ const CardComponent = ({title,id,image}) => (
         </Col>
         <Col span={6}>
           <Row justify="flex-end">
-            <Button flat auto rounded color="secondary">
+            <Button flat auto rounded color="secondary" onClick={()=>navigate("/details")}>
               <Text
                 css={{ color: "inherit" }}
                 size={12}
@@ -40,6 +42,6 @@ const CardComponent = ({title,id,image}) => (
       </Row>
     </Card.Footer>
   </Card>
-);
+};
 
 export default CardComponent

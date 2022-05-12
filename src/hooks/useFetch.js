@@ -2,7 +2,7 @@ import { useState, useEffect } from 'react'
 import { getRecipes } from '../helpers/getRecipes';
 
 
-export const useFetch = ( endpoint ) => {
+export const useFetch = ( endpoint, params="" ) => {
     
     const [data, setData] = useState({
         data: [],
@@ -10,8 +10,7 @@ export const useFetch = ( endpoint ) => {
     });
 
     useEffect( () => {
-        /* const params="&region=US" */
-        getRecipes(endpoint/* ,params */)
+        getRecipes(endpoint,params)
         .then( movies => {
                 
             setData({
@@ -20,7 +19,7 @@ export const useFetch = ( endpoint ) => {
             });
         })
             
-    }, [endpoint])
+    }, [endpoint,params])
 
     return data; // { data:[], loading: true };
 
