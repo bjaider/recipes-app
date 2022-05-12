@@ -1,0 +1,12 @@
+.card-container {
+  width: 100%;
+}
+.card-footer-container {
+  position: absolute;
+  border-top: 1px solid rgba(255, 255, 255, 0.2);
+  bottom: 0;
+  z-index: 1;
+}
+.card-footer {
+  align-items: center;
+}
