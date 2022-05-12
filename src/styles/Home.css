@@ -1,0 +1,13 @@
+.home-container{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    /* flex-direction: column; */
+}
+.home-grid-container{
+    justify-content: center;
+    /* flex-direction: column; */
+}
+.pagination{
+    margin: 0 auto;
+}
